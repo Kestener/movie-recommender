@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMR</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <h1>{{ title }}</h1>
+  <p>Get movie recommendations for free!</p>
+  
+  <!-- Movie recommender form-->
+  <form action="/recommender">
+    <p>Pick your recommender algorithm</p>
+    <select name="option">
+      <option value="Random">Random</option>
+      <option value="NMF">NMF</option>
+      <option value="Cosine">Cosine Similarity</option>
+    </select>
+    <br>
+    <p>Please rate the following movies on a scale from 0.0 to 5.0:</p>
+    <input name="title" type="text" placeholder="Enter movies" list="movies_list">
+    <input type="number" min="0" max="5" step="0.5" name="rating" placeholder="0.0 - 5.0" required><br>
+    <input name="title" type="text" placeholder="Enter movies" list="movies_list">
+    <input type="number" min="0" max="5" step="0.5" name="rating" placeholder="0.0 - 5.0" required><br>
+    <input name="title" type="text" placeholder="Enter movies" list="movies_list">
+    <input type="number" min="0" max="5" step="0.5" name="rating" placeholder="0.0 - 5.0" required><br>
+    <input name="title" type="text" placeholder="Enter movies" list="movies_list">
+    <input type="number" min="0" max="5" step="0.5" name="rating" placeholder="0.0 - 5.0" required><br>
+    <input name="title" type="text" placeholder="Enter movies" list="movies_list">
+    <input type="number" min="0" max="5" step="0.5" name="rating" placeholder="0.0 - 5.0" required><br>
+    <input type="submit" value="get my movies">
+  </form>
+
+  <datalist id="movies_list">
+    {%for movie in movies%}
+    <option>{{movie}}</option>
+    {%endfor%}
+</datalist>
+</body>
+
+</html>
