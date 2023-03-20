@@ -1,4 +1,4 @@
-h1{color:aqua;
+h1{color:rgb(241, 206, 6);
 font-size:50px}
 
 body{
@@ -8,8 +8,8 @@ body{
     text-align:center;
     font-size: small;
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: bisque;
-    background-image: url("timothy-eberly-dTLlhgeEJWg-unsplash.jpg");
+    background-color: rgb(5, 4, 56);
+    background-image: url('angelfire_background.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -41,9 +41,9 @@ li{
     font-size:medium;
     }
 
-.movies li{padding: 10px;} /*class selector*/
+.movies li{padding: 10px;}
 
-.movies li:nth-child(odd){background-color: grey;}  /*:nth-child() is pseudo selector*/
+.movies li:nth-child(odd){background-color: grey;} 
 .movies li:nth-child(even){background-color: white;}
 
 a{color: darkblue;
@@ -63,6 +63,8 @@ img:hover{
     transform: rotate(5deg) scale(1.2);}
 
 
-p,h2{color: aqua;
+h2{color: rgb(224, 7, 177);
 font-size: 20px;}
 
+p{color: rgb(224, 7, 177);
+    font-size: 20px;}
